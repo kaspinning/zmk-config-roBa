@@ -3,7 +3,7 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     - name: sayu-hub # 変更
-      url-base: https://github.com/sayu-hub # 変更
+      url-base: https://github.com/kaspinning/zmk-pmw3610-driver # 感度調整参照変更
   projects:
     - name: zmk
       remote: zmkfirmware
