@@ -3,6 +3,3 @@ config SHIELD_ROBA_R
 
 config SHIELD_ROBA_L
     def_bool $(shields_list_contains,roBa_L)
-
-CONFIG_BT_PERIPHERAL_PREF_MIN_INT=6
-CONFIG_BT_PERIPHERAL_PREF_MAX_INT=12
