@@ -81,6 +81,13 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "NEW_MACRO";
         };
+
+        MailAdress: MailAdress {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp K &kp A &kp S &kp P &kp I &kp N &kp I &kp N &kp G &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "MAILADRESS";
+        };
     };
 
     keymap {
@@ -138,7 +145,7 @@
         SCROLL {
             bindings = <
 &none      &none  &none  &none  &studio_unlock                    &none  &none  &none  &none  &none
-&none      &none  &none  &none  &none           &none      &none  &none  &none  &none  &none  &none
+&none      &none  &none  &none  &MailAdress     &none      &none  &none  &none  &none  &none  &none
 &kp LC(W)  &none  &kp S  &kp U  &kp LG(X)       &none      &none  &none  &none  &none  &none  &none
 &none      &none  &none  &none  &none           &none      &none  &none                       &none
             >;
