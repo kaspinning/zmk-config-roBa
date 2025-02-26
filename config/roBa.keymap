@@ -64,16 +64,11 @@
             tapping-term-ms = <200>;
         };
 
-        scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-            compatible = "zmk,behavior-sensor-rotate";
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-sensor-rotate-var";
             label = "NEW_BEHAVIOR";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc MOVE_Y(20)>, <&msc MOVE_Y(-20)>; 
-
-            //遅くした5→20
-            // 追加: スクロールのタップ時間を設定 (20ms)
-
-            tap-ms = <20>;
+            #sensor-binding-cells = <2>;
+            bindings = <&msc MOVE_Y(20)>, <&msc MOVE_Y(-20)>;
         };
     };
 
