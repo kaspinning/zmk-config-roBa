@@ -5,9 +5,9 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define MOUSE 4
-#define SCROLL 4
+#define SCROLL 5
 #define NUM 6
-//#define ZMK_POINTING_DEFAULT_SCRL_VAL 80
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 
 &mt {
     flavor = "balanced";
@@ -72,7 +72,6 @@
 
             tap-ms = <20>;
         };
-
     };
 
     macros {
