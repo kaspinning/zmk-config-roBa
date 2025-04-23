@@ -52,12 +52,12 @@
             key-positions = <7 8>;
         };
 
-        Shift_MB3 {
+        shift_MB3 {
             bindings = <&Shift_MB3>;
             key-positions = <3 14>;
         };
 
-        MB3 {
+        mb3_node {
             bindings = <&mkp MB3>;
             key-positions = <2 13>;
         };
