@@ -99,7 +99,7 @@
         };
 
         Shift_MB3: Shift_MB3 {
-            compatible = "zmk,behavior-macro";
+            compatible = "zmk,behavior-macro-one-param";
             label = "SHIFT_MB3";
             #binding-cells = <0>;
             flavor = "press"; // ← macro_press の代わりにこれを指定
