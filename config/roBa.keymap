@@ -55,7 +55,6 @@
         shift_MB3 {
             bindings = <&Shift_MB3>;
             key-positions = <3 14>;
-            slow-release;
         };
 
         mb3_node {
