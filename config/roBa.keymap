@@ -53,7 +53,7 @@
         };
 
         shift_MB3 {
-            bindings = <&Shift_MB3>;
+            bindings = <&Shift_MB3 0>;
             key-positions = <3 14>;
         };
 
