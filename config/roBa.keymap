@@ -56,12 +56,6 @@
             bindings = <&mkp MB3>;
             key-positions = <2 13>;
         };
-
-        combo_shift_mb3 {
-            timeout-ms = <30>;
-            key-positions = <3 14>;
-            bindings = <&Shift_MB3>;
-        };
     };
 
     behaviors {
@@ -83,12 +77,24 @@
             tap-ms = <20>;
         };
 
+        shift_kp: kp {
+            compatible = "zmk,behavior-key-press";
+            label = "Shift_KP";
+            param1 = <0xE1>; // LSFT (Left Shift) の HID Usage ID
+        };
+
+        mb3_kp: kp {
+            compatible = "zmk,behavior-key-press";
+            label = "MB3_KP";
+            param1 = <0xB8>; // MB3 (Mouse Button 3) の HID Usage ID
+        };
+
         Shift_MB3: behavior-hold-tap {
             compatible = "zmk,behavior-hold-tap";
             label = "Shift_MB3";
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&kp LSFT &kp MB3>;
+            bindings = <&shift_kp &mb3_kp>;
         };
     };
 
