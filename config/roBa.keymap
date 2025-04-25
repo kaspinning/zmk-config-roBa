@@ -56,6 +56,12 @@
             bindings = <&mkp MB3>;
             key-positions = <2 13>;
         };
+
+        combo_shift_mb3 {
+            timeout-ms = <30>;
+            key-positions = <3 14>;
+            bindings = <&Shift_MB3>;
+        };
     };
 
     behaviors {
