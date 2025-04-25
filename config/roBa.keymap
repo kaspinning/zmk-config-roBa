@@ -52,11 +52,6 @@
             key-positions = <7 8>;
         };
 
-        shift_MB3 {
-            bindings = <&Shift_MB3 0>;
-            key-positions = <3 14>;
-        };
-
         mb3_node {
             bindings = <&mkp MB3>;
             key-positions = <2 13>;
@@ -81,6 +76,14 @@
 
             tap-ms = <20>;
         };
+
+        Shift_MB3: behavior-hold-tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Shift_MB3";
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp LSFT &kp MB3>;
+        };
     };
 
     macros {
@@ -97,18 +100,6 @@
             bindings = <&none &kp K &kp A &kp S &kp P &kp I &kp N &kp I &kp N &kp G &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
             label = "MAILADRESS";
         };
-
-        Shift_MB3: Shift_MB3 {
-            compatible = "zmk,behavior-macro-one-param";
-            label = "SHIFT_MB3";
-            #binding-cells = <1>;
-            flavor = "press"; // ← macro_press の代わりにこれを指定
-            bindings = <
-                &kp LEFT_SHIFT
-                &mkp MB3
-            >;
-        };
-
     };
 
     keymap {
