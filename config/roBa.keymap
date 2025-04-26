@@ -52,7 +52,7 @@
             key-positions = <7 8>;
         };
 
-        MB3 {
+        combo_MB3 {
             bindings = <&mkp MB3>;
             key-positions = <13 2>;
         };
