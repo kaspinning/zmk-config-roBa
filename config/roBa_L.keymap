@@ -66,6 +66,11 @@
             bindings = <&kp LC(LS(TAB))>;
             key-positions = <29 18>;
         };
+
+        bt_sel2 {
+            bindings = <&bt BT_SEL 2>;
+            key-positions = <9 8>;
+        };
     };
 
     behaviors {
@@ -115,6 +120,31 @@
             #binding-cells = <0>;
             bindings = <&none &kp K &kp A &kp S &kp P &kp I &kp N &kp I &kp N &kp G &kp AT &kp G &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
             label = "MAILADRESS";
+        };
+
+        bt0: bt0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&tog_off 0 &tog_off 1>,
+                <&macro_wait_time 200>,
+                <&bt BT_SEL 0>,
+                <&macro_wait_time 500>;
+
+            label = "BT0";
+        };
+
+        bt2: bt3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&tog_off 0 &tog_off 1>,
+                <&macro_wait_time 200>,
+                <&bt BT_SEL 2>,
+                <&macro_wait_time 500>,
+                <&tog_on 1>;
+
+            label = "BT3";
         };
     };
 
