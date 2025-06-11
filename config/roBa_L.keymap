@@ -107,23 +107,43 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        WINDOWS {
             bindings = <
-&kp TAB        &kp W         &kp E  &kp R      &kp T                                     &kp Y      &kp U    &kp I      &kp O    &kp SEMICOLON
-&kp A          &kp S         &kp D  &kp F      &kp G  &mo 6               &kp GRAVE      &kp H      &lt 5 J  &lt 1 K    &kp L    &kp P
-&kp Z          &kp X         &kp C  &kp V      &kp B  &kp LEFT_SHIFT      &kp RSHIFT     &kp N      &kp M    &kp COMMA  &kp DOT  &kp SLASH
-&lt 7 LG(TAB)  &kp LEFT_ALT  &mo 2  &kp SPACE  &mo 1  &mo 5               &kp BACKSPACE  &kp ENTER                               &lt 7 LG(TAB)
+&kp TAB        &kp W         &kp E  &kp R         &kp T                                     &kp Y      &kp U  &kp I      &kp O    &kp SEMICOLON
+&kp A          &kp S         &kp D  &kp F         &kp G  &mo 8               &kp GRAVE      &kp H      &kp J  &kp K      &kp L    &kp P
+&kp Z          &kp X         &kp C  &kp V         &kp B  &kp LEFT_SHIFT      &kp RSHIFT     &kp N      &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&lt 9 LG(TAB)  &kp LEFT_ALT  &mo 4  &lt 10 SPACE  &mo 2  &mo 7               &kp BACKSPACE  &kp ENTER                             &lt 9 LG(TAB)
             >;
 
             sensor-bindings = <&new_behavior SCRL_DOWN SCRL_UP>;
         };
 
-        FUNCTION {
+        MAC {
+            bindings = <
+&kp TAB         &kp W         &kp E  &kp R        &kp T                                     &kp Y      &kp U  &kp I      &kp O    &kp SEMICOLON
+&kp A           &kp S         &kp D  &kp F        &kp G  &mo 8               &kp GRAVE      &kp H      &kp J  &kp K      &kp L    &kp P
+&kp Z           &kp X         &kp C  &kp V        &kp B  &kp LEFT_SHIFT      &kp RSHIFT     &kp N      &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&lt 10 LG(TAB)  &kp LEFT_ALT  &mo 4  &lt 1 SPACE  &mo 3  &mo 7               &kp BACKSPACE  &kp ENTER                             &lt 10 LG(TAB)
+            >;
+
+            sensor-bindings = <&new_behavior SCRL_DOWN SCRL_UP>;
+        };
+
+        WIN_MAIN {
             bindings = <
 &kp LG(LS(S))   &kp F2             &kp LC(X)      &kp LC(A)      &kp LC(Z)                                       &kp Q          &kp F7          &mkp MB4        &mkp MB5         &kp SQT
 &kp LCTRL       &kp LC(S)          &kp LC(V)      &mkp MB1       &kp F5     &none                  &kp LS(F10)   &kp HOME       &mkp MB1        &kp UP_ARROW    &mkp MB2         &kp MINUS
 &kp LS(DELETE)  &kp LA(BACKSPACE)  &kp ESCAPE     &kp LC(C)      &kp LG(V)  &kp LC(BACKSPACE)      &kp LC(DEL)   &kp END        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LS(LC(T))
 &kp ENTER       &none              &kp BACKSPACE  &kp BACKSPACE  &none      &none                  &kp LEFT_ALT  &kp RIGHT_ALT                                                   &kp CAPSLOCK
+            >;
+        };
+
+        MAC_MAIN {
+            bindings = <
+&kp LG(LS(S))   &kp F2             &kp LC(X)      &kp LC(A)      &kp LC(Z)                                      &kp Q      &kp F7          &mkp MB4        &mkp MB5         &kp SQT
+&kp LCTRL       &kp LC(S)          &kp LC(V)      &mkp MB1       &kp F5     &none                  &kp LS(F10)  &kp HOME   &mkp MB1        &kp UP_ARROW    &mkp MB2         &kp MINUS
+&kp LS(DELETE)  &kp LA(BACKSPACE)  &kp ESCAPE     &kp LC(C)      &kp LG(V)  &kp LC(BACKSPACE)      &kp LC(DEL)  &kp END    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LS(LC(T))
+&kp ENTER       &none              &kp BACKSPACE  &kp BACKSPACE  &none      &kp A                  &kp LANG1    &kp LANG2                                                   &kp CAPSLOCK
             >;
         };
 
@@ -165,7 +185,7 @@
             >;
         };
 
-        layer_6 {
+        BT {
             bindings = <
 &trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
@@ -174,12 +194,21 @@
             >;
         };
 
-        layer_7 {
+        TRACKBALL_ARROW {
             bindings = <
 &none  &none  &mkp MB3  &none           &none                                &none        &none           &kp UP_ARROW    &none            &none
 &none  &none  &none     &kp LEFT_SHIFT  &none              &none      &none  &none        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none
 &none  &none  &none     &kp LC(DELETE)  &kp LC(BACKSPACE)  &none      &none  &kp LS(F10)  &none           &none           &none            &none
 &none  &none  &none     &kp DELETE      &kp BACKSPACE      &none      &none  &none                                                         &none
+            >;
+        };
+
+        FUSION {
+            bindings = <
+&trans  &trans  &mkp MB3  &trans          &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &kp LEFT_SHIFT  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans          &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans          &trans  &trans      &trans  &trans                          &trans
             >;
         };
     };
