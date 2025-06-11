@@ -125,11 +125,7 @@
         bt0: bt0 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&tog_off 0 &tog_off 1>,
-                <&macro_wait_time 200>,
-                <&bt BT_SEL 0>,
-                <&macro_wait_time 500>;
+            bindings = <&tog_off 1>, <&macro_wait_time 200>, <&bt BT_SEL 0>;
 
             label = "BT0";
         };
@@ -138,7 +134,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&tog_off 0 &tog_off 1>,
+                <&tog_off 1>,
                 <&macro_wait_time 200>,
                 <&bt BT_SEL 2>,
                 <&macro_wait_time 500>,
@@ -185,7 +181,7 @@
         MAC_MAIN {
             bindings = <
 &kp LG(LS(S))   &kp F2             &kp LC(X)      &kp LC(A)      &kp LC(Z)                                      &kp Q      &kp F7          &mkp MB4        &mkp MB5         &kp SQT
-&kp LCTRL       &kp LC(S)          &kp LC(V)      &mkp MB1       &kp F5     &none                  &kp LS(F10)  &kp HOME   &mkp MB1        &kp UP_ARROW    &mkp MB2         &kp MINUS
+&kp LCTRL       &kp LC(S)          &kp LC(V)      &mkp MB1       &kp F5     &kp W                  &kp LS(F10)  &kp HOME   &mkp MB1        &kp UP_ARROW    &mkp MB2         &kp MINUS
 &kp LS(DELETE)  &kp LA(BACKSPACE)  &kp ESCAPE     &kp LC(C)      &kp LG(V)  &kp LC(BACKSPACE)      &kp LC(DEL)  &kp END    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LS(LC(T))
 &kp ENTER       &none              &kp BACKSPACE  &kp BACKSPACE  &none      &kp A                  &kp LANG1    &kp LANG2                                                   &kp CAPSLOCK
             >;
