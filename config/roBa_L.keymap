@@ -245,10 +245,10 @@
 
         FUSION {
             bindings = <
-&trans  &trans  &mkp MB3  &trans          &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &kp LEFT_SHIFT  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans          &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans          &trans  &trans      &trans  &trans                          &trans
+&trans       &trans  &mkp MB3  &trans          &trans                      &trans  &trans  &trans  &trans  &trans
+&kp LA(TAB)  &trans  &trans    &kp LEFT_SHIFT  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans  &trans    &trans          &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans  &trans    &trans          &trans  &trans      &trans  &trans                          &trans
             >;
         };
     };
