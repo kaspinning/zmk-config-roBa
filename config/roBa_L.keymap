@@ -59,12 +59,12 @@
 
         ctrl+tab {
             bindings = <&kp LC(TAB)>;
-            key-positions = <18 7>;
+            key-positions = <29 26>;
         };
 
         ctrl+shift+tab {
             bindings = <&kp LC(LS(TAB))>;
-            key-positions = <29 18>;
+            key-positions = <28 27>;
         };
 
         bt_sel2 {
@@ -245,8 +245,8 @@
 
         FUSION {
             bindings = <
-&trans       &trans  &mkp MB3  &trans          &trans                      &trans  &trans  &trans  &trans  &trans
-&kp LA(TAB)  &trans  &trans    &kp LEFT_SHIFT  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &trans  &trans    &trans          &trans                      &trans  &trans  &trans  &trans  &trans
+&kp LA(TAB)  &trans  &mkp MB3  &kp LEFT_SHIFT  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans       &trans  &trans    &trans          &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans       &trans  &trans    &trans          &trans  &trans      &trans  &trans                          &trans
             >;
