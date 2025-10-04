@@ -112,6 +112,3 @@
         triggers-per-rotation = <10>;
     };
 };
-
-#undef ZMK_MOUSE_LAYER_AUTO
-#define ZMK_MOUSE_LAYER_AUTO 0
